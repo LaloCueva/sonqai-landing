@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título SEO Optimizado -->
+    <title>Sonqai - Tecnología con corazón peruano | Desarrollo Web y Apps</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Sonqai: Tecnología con corazón peruano. Soluciones digitales que respetan nuestras raíces y empoderan emprendedores reales.">
+    
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="Sonqai, tecnología peruana, desarrollo web, emprendimiento, inteligencia artificial, identidad andina">
+    <meta name="author" content="Sonqai">
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Sonqai - Tecnología con corazón de nuestras raíces" />
+    <meta property="og:description" content="Soluciones digitales con espíritu andino para emprendedores que laten fuerte." />
+    <meta property="og:image" content="https://sonqai.com/images/og-image.jpg" />
+    <meta property="og:url" content="https://sonqai.com" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+    
+    <!-- Preconnect para mejorar rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Schema.org para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sonqai",
+        "url": "https://sonqai.com",
+        "logo": "https://sonqai.com/images/logo.png",
+        "description": "Tecnología con corazón peruano para emprendedores que construyen imperios digitales",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lima",
+            "addressRegion": "Lima",
+            "addressCountry": "Perú"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer service",
+            "email": "contacto@sonqai.com",
+            "telephone": "+51925513701"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            /* PALETA DE COLORES PERUANA CON MEJOR CONTRASTE */
+            --coast-color: #2563eb;       /* Azul más oscuro para mejor contraste */
+            --sierra-color: #5c2e00;      /* Marrón más oscuro para accesibilidad */
+            --selva-color: #059669;       /* Verde más oscuro para mejor contraste */
+            --sun-color: #d97706;         /* Amarillo más oscuro para accesibilidad */
+            --sun-light: #fbbf24;         /* Amarillo claro */
+            
+            --text-color: #1e293b;        /* Gris azulado más oscuro */
+            --text-light: #64748b;        /* Gris para texto secundario */
+            --bg-color: #fff7ed;          /* Fondo marfil cálido más claro */
+            --bg-alt: #fffbeb;            /* Fondo alternativo más claro */
+            --card-bg: #ffffff;           /* Fondo tarjetas */
+            
+            /* Variables de diseño */
+            --border-radius: 12px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.07);
+            --transition: all 0.3s ease;
+            --peru-gradient: linear-gradient(135deg, var(--coast-color), var(--sierra-color), var(--selva-color));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px; /* Para compensar el header fijo */
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Mejora de rendimiento: evitar repaints costosos */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            will-change: transform;
+        }
+
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-weight: 700;
+            margin-top: 0;
+            color: var(--sierra-color);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--sun-color);
+            border-radius: 2px;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: clamp(1rem, 2vw, 1.1rem);
+        }
+
+        a {
+            color: var(--coast-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        a:hover {
+            color: var(--sun-color);
+        }
+
+        /* Efecto subrayado accesible */
+        a:focus-visible {
+            outline: 3px solid var(--sun-color);
+            outline-offset: 2px;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--sun-color);
+            transition: var(--transition);
+        }
+
+        a:hover::after,
+        a:focus::after {
+            width: 100%;
+        }
+
+        /* Botones accesibles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: var(--border-radius);
+            background: var(--sierra-color);
+            color: white;
+            padding: 0.9rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            min-width: 180px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            background: var(--sun-color);
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid var(--sun-light);
+            outline-offset: 2px;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-tech {
+            background: var(--coast-color);
+        }
+
+        .btn-tech:hover {
+            background: #1d4ed8;
+        }
+
+        /* Tarjetas accesibles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            padding: 2rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card:focus-within {
+            outline: 2px solid var(--sun-color);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--peru-gradient);
+        }
+
+        /* Iconos accesibles */
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--peru-gradient);
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--bg-color);
+        }
+
+        /* Patrones peruanos optimizados */
+        .peru-pattern {
+            position: absolute;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .pattern-coast {
+            top: 10%;
+            left: 5%;
+            width: 200px;
+            height: 200px;
+            background: 
+                radial-gradient(circle, var(--coast-color) 10%, transparent 10%),
+                radial-gradient(circle, transparent 10%, var(--coast-color) 10%, transparent 20%);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+
+        .pattern-sierra {
+            bottom: 15%;
+            right: 8%;
+            width: 150px;
+            height: 150px;
+            background: 
+                linear-gradient(45deg, transparent 45%, var(--sierra-color) 45%, var(--sierra-color) 55%, transparent 55%),
+                linear-gradient(-45deg, transparent 45%, var(--sierra-color) 45%, var(--sierra-color) 55%, transparent 55%);
+            background-size: 40px 40px;
+        }
+
+        .pattern-selva {
+            top: 40%;
+            right: 15%;
+            width: 100px;
+            height: 100px;
+            background: 
+                radial-gradient(circle, var(--selva-color) 20%, transparent 20%),
+                radial-gradient(circle, transparent 20%, var(--selva-color) 10%, transparent 30%);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        /* Animaciones optimizadas */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        /* Header accesible */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: background 0.3s ease, padding 0.3s ease;
+            background: rgba(255, 247, 237, 0.97);
+            backdrop-filter: blur(10px);
+        }
+
+        header.scrolled {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.7rem;
+            color: var(--sierra-color);
+        }
+
+        .logo span {
+            color: var(--sun-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+        }
+
+        /* Hero Section optimizada */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+            background: linear-gradient(rgba(255, 247, 237, 0.9), rgba(255, 247, 237, 0.9));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 6vw, 4rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: var(--sierra-color);
+            margin-bottom: 2rem;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* Values Grid optimizado */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .value-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Features Section optimizada */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        /* Responsive mejorado */
+        @media (max-width: 992px) {
+            section {
+                padding: 4rem 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Modo oscuro mejorado */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #f1f5f9;
+                --text-light: #cbd5e1;
+                --bg-color: #0f172a;
+                --bg-alt: #1e293b;
+                --card-bg: #1e293b;
+                --sierra-color: #f59e0b;
+            }
+            
+            header {
+                background: rgba(15, 23, 42, 0.97);
+            }
+            
+            .hero {
+                background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95));
+            }
+        }
+        
+        /* Corrección de contraste para accesibilidad */
+        .contrast-fix {
+            color: var(--sierra-color) !important;
+        }
+        
+        /* Mejora de CLS (Cumulative Layout Shift) */
+        img, video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .aspect-ratio-box {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        
+        .aspect-ratio-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Patrones decorativos peruanos -->
+    <div class="peru-pattern pattern-coast"></div>
+    <div class="peru-pattern pattern-sierra"></div>
+    <div class="peru-pattern pattern-selva"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                Sonq<span>ai</span>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about">Qué es Sonqai</a></li>
+                    <li><a href="#values">Valores</a></li>
+                    <li><a href="#tech">Tecnología</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate">Tecnología que nace desde el corazón de nuestras raíces</h1>
+                <p class="hero-subtitle animate delay-1">Para los que nunca se rindieron. Para los que laten fuerte.</p>
+                <p class="animate delay-2">Soluciones digitales con espíritu peruano para emprendedores que construyen el futuro sin olvidar sus orígenes.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn animate delay-2">Conoce nuestra historia</a>
+                    <a href="#tech" class="btn btn-tech animate delay-3">Nuestra tecnología</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background-color: var(--bg-alt);">
+        <div class="container">
+            <h2 class="text-center animate">¿Qué es <span class="contrast-fix">Sonqai</span>?</h2>
+            
+            <div class="card animate delay-1">
+                <p>Sonqai nace desde una necesidad profunda: la de tender la mano.</p>
+                <p>No a las grandes corporaciones, sino al emprendedor real —aquel que no siguió una línea de carrera tradicional, que no estudió en las mejores universidades, pero que se levanta cada día con el corazón encendido y la voluntad intacta.</p>
+                <p>Es una empresa pensada para quienes lo dieron todo sin tenerlo todo.</p>
+                <p>Sonqai no es solo tecnología. Es humanidad. Es para el que fue subestimado, para el que lucha en silencio. Para esa persona que no sabe cómo comunicarse, que se siente incomprendida, pero que guarda dentro un potencial inmenso. Sonqai cree en ellos, como nadie más lo ha hecho.</p>
+                <p>Inspirado en las raíces del Perú, en el espíritu del cholo trabajador, del que madruga mientras el sol aún duerme, del que trabaja hasta que el cielo se apaga.</p>
+                <p>En Sonqai vive el Ande, pero también la Costa y la Selva. Vive el legado moche, la energía ancestral de las líneas de Nazca, y la fuerza de un pueblo que nunca se rinde.</p>
+                <p>Aunque no hablo quechua, lo siento. Porque el quechua no se aprende: se vibra. Y Sonqai vibra con esa energía: la de hablar desde el corazón.</p>
+                <p>"Sonqai" significa corazón. Pero no es solo eso: es corazón con inteligencia. Es la unión de la emoción y la tecnología, el puente entre la sabiduría ancestral y el futuro digital.</p>
+                <p>Gracias a la inteligencia artificial, hoy puedo construir lo que antes solo soñaba. Lo que parecía imposible ahora se vuelve real. Ya no dependo de otros: he aprendido a confiar en mí, a crear, a crecer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values">
+        <div class="container">
+            <h2 class="text-center animate">❤️ Sonqai es</h2>
+            
+            <div class="values-grid">
+                <div class="value-item animate delay-1">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Amor</h3>
+                    <p>Pasíon en cada proyecto, dedicación en cada línea de código.</p>
+                </div>
+                
+                <div class="value-item animate delay-2">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Raíces</h3>
+                    <p>Conectados con nuestra tierra, orgullosos de nuestra herencia multicultural.</p>
+                </div>
+                
+                <div class="value-item animate delay-3">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Familia</h3>
+                    <p>Cada cliente, cada colaborador es parte de nuestra gran familia Sonqai.</p>
+                </div>
+                
+                <div class="value-item animate delay-1">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Tecnología</h3>
+                    <p>Herramientas modernas para construir el futuro que soñamos.</p>
+                </div>
+                
+                <div class="value-item animate delay-2">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Pasión</h3>
+                    <p>La fuerza que nos impulsa a superar cualquier desafío.</p>
+                </div>
+                
+                <div class="value-item animate delay-3">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Hermandad</h3>
+                    <p>Juntos somos más fuertes, juntos construimos imperios.</p>
+                </div>
+                
+                <div class="value-item animate delay-1">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Tú</h3>
+                    <p>Eres la razón de todo esto. Tu éxito es nuestro éxito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Section -->
+    <section id="tech" style="background-color: var(--bg-alt);">
+        <div class="container">
+            <h2 class="text-center animate">Nuestra <span class="contrast-fix">tecnología</span></h2>
+            <p class="text-center animate delay-1">Herramientas modernas con alma peruana</p>
+            
+            <div class="values-grid">
+                <div class="value-item animate delay-1">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Aplicaciones robustas como las construcciones incaicas, con los últimos estándares tecnológicos.</p>
+                </div>
+                
+                <div class="value-item animate delay-2">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Soluciones móviles que escalan montañas de requerimientos con la elegancia de los textiles andinos.</p>
+                </div>
+                
+                <div class="value-item animate delay-3">
+                    <div class="icon" aria-hidden="true">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud & AI</h3>
+                    <p>Inteligencia artificial que aprende con la sabiduría ancestral y se despliega en la nube.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="animate">¿Listo para construir tu <span class="contrast-fix">imperio digital</span>?</h2>
+                <p class="animate delay-1">Contáctanos y comencemos este viaje juntos</p>
+                <a href="tel:+51925513701" class="btn animate delay-2" style="margin-top: 1rem;">
+                    <i class="fas fa-phone" aria-hidden="true"></i> +51 925 513 701
+                </a>
+                <a href="mailto:contacto@sonqai.com" class="btn btn-tech animate delay-3" style="margin-top: 1rem;">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> contacto@sonqai.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--peru-gradient); color: white; padding: 3rem 0;">
+        <div class="container">
+            <div class="text-center">
+                <div class="logo" style="color: white; font-size: 2rem; margin-bottom: 1.5rem;">
+                    Sonq<span style="color: var(--sun-light);">ai</span>
+                </div>
+                <p style="max-width: 600px; margin: 0 auto 1.5rem;">Tecnología con corazón peruano para quienes construyen el futuro sin olvidar sus raíces</p>
+                <p style="font-size: 0.9rem; opacity: 0.8;">© 2023 Sonqai. Todos los derechos reservados. Lima, Perú</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts optimizados al final del body -->
+    <script>
+        // Optimización de rendimiento: carga diferida de recursos no críticos
+        function loadNonCriticalResources() {
+            // Cargar Font Awesome
+            const faCSS = document.createElement('link');
+            faCSS.rel = 'stylesheet';
+            faCSS.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+            document.head.appendChild(faCSS);
+        }
+        
+        // Cargar después de que la página esté lista
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(loadNonCriticalResources);
+        } else {
+            window.addEventListener('load', loadNonCriticalResources);
+        }
+        
+        // Efecto de scroll para el header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animación al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate');
+            
+            // Usar Intersection Observer para animar al hacer scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+            
+            // Enfocar el contenido principal para accesibilidad
+            document.querySelector('main')?.setAttribute('tabindex', '-1');
+            document.querySelector('main')?.focus();
+        });
+    </script>
+</body>
+</html>
