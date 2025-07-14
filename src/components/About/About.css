@@ -1,0 +1,19 @@
+.essence-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.essence-list li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.8rem;
+  font-weight: 500;
+}
+
+.essence-list li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  top: 0;
+}

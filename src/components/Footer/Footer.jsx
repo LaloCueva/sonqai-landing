@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="footer-about">
             <div className="footer-logo">Sonqai</div>
             <p>Tecnología con corazón andino. Construyendo imperios digitales para los que nunca se rinden.</p>
-            <p>contacto@sonqai.tech<br />Cusco, Perú</p>
+            <p>contacto@sonqai.tech<br />Lima, Perú</p>
           </div>
           <div className="footer-links">
             <h3>Enlaces</h3>

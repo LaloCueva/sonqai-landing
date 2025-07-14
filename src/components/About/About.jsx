@@ -1,4 +1,4 @@
-// src/components/About.js
+// src/components/About/About.jsx
 import React from 'react';
 import './About.css';
 
@@ -9,35 +9,38 @@ const About = () => {
         <h2 className="section-title">¿Qué es Sonqai?</h2>
         <div className="about-content">
           <div className="about-text">
-            <h3>Nace desde una necesidad profunda: la de tender la mano</h3>
-            <p>No a las grandes corporaciones, sino al emprendedor real —aquel que no siguió una línea de carrera tradicional, que no estudió en las mejores universidades, pero que se levanta cada día con el corazón encendido y la voluntad intacta.</p>
-            <p>Es una empresa pensada para quienes lo dieron todo sin tenerlo todo. Sonqai no es solo tecnología. Es humanidad. Es para el que fue subestimado, para el que lucha en silencio.</p>
-            
-            <div className="about-values">
-              <div className="value-card">
-                <i className="fas fa-heart"></i>
-                <h4>Amor</h4>
-                <p>Pasíon en cada proyecto</p>
-              </div>
-              <div className="value-card">
-                <i className="fas fa-mountain"></i>
-                <h4>Raíces</h4>
-                <p>Conectados con nuestra tierra</p>
-              </div>
-              <div className="value-card">
-                <i className="fas fa-users"></i>
-                <h4>Familia</h4>
-                <p>Creciendo juntos</p>
-              </div>
-              <div className="value-card">
-                <i className="fas fa-laptop-code"></i>
-                <h4>Tecnología</h4>
-                <p>Herramientas para el futuro</p>
-              </div>
-            </div>
+            <h3>Potencia tu Ingenio. Tecnología con Corazón.</h3>
+
+            <p>
+              Sonqai nace de una convicción profunda: la tecnología más poderosa es aquella que reconoce y potencia el espíritu humano inquebrantable.
+            </p>
+
+            <p>
+              Nos dirigimos al emprendedor auténtico, al que forja su camino con resiliencia y visión, más que con credenciales. Al que se levanta cada día con la voluntad intacta para construir lo extraordinario desde lo esencial.
+            </p>
+
+            <p>
+              Somos la plataforma para quienes lo dan todo sin haberlo tenido todo. Para el talento subestimado, la voz que resiste en silencio, la mente brillante que busca su impacto. En Sonqai vemos potencial donde otros ven límites.
+            </p>
+
+            <p>
+              Inspirados por una fuerza ancestral y un espíritu que transforma desafíos en victorias, llevamos en nuestro ADN la energía de una tierra vibrante y la sabiduría de quienes nunca se rinden. Hablamos desde el corazón, con claridad y determinación que nacen de lo más profundo.
+            </p>
+
+            <p>
+              ¿Por qué "Sonqai"? Porque "Sonqay" significa corazón en quechua. Pero para nosotros, Sonqai es la unión definitiva: <em>Corazón + Inteligencia</em>. Es la fusión entre la pasión humana, la resiliencia innata y la potencia de la tecnología avanzada. Es el puente entre el ingenio profundo y la innovación digital.
+            </p>
+
+            <h4>Nuestra Esencia:</h4>
+            <ul className="essence-list">
+              <li>Empoderamos al creador, al luchador, al visionario no convencional.</li>
+              <li>Conectamos talento puro con oportunidades reales y herramientas transformadoras.</li>
+              <li>Democratizamos el acceso al poder de la tecnología inteligente.</li>
+              <li>Impulsamos soluciones donde la inteligencia artificial amplifica la creatividad y la determinación humanas.</li>
+            </ul>
           </div>
           <div className="about-image">
-            {/* Espacio para imagen representativa */}
+            {/* Puedes colocar una imagen o gráfico aquí si deseas */}
           </div>
         </div>
       </div>
